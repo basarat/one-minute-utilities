@@ -21,7 +21,7 @@
     "url": "https://github.com/basarat/one-minute-utilities/issues"
   },
   "homepage": "https://github.com/basarat/one-minute-utilities#readme",
-  "dependencies": {
+  "devDependencies": {
     "@types/jest": "25.2.3",
     "jest": "26.0.1",
     "ts-jest": "26.1.0",
