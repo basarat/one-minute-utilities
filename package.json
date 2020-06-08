@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "preversion": "npm run build",
-    "postversion": "npm publish && git push",
+    "postversion": "npm publish && git push --tags",
     "build": "tsc -p .",
     "test": "jest",
     "start": "jest --watch"
