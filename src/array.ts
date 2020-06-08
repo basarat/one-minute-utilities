@@ -19,7 +19,7 @@ export function sum(array: number[]): number {
 }
 
 export function average(array: number[]): number {
-  return sum(array) / array.length;
+  return array.reduce((acc, v) => acc + v, 0) / array.length;
 }
 
 export function concat<T>(a: T[], b: T[]): T[] {
@@ -28,4 +28,8 @@ export function concat<T>(a: T[], b: T[]): T[] {
 
 export function unique<T>(array: T[]): T[] {
   return Array.from(new Set(array));
+}
+
+export function range(min: number, max: number) { 
+  return Array(max - min + 1).fill(0).map((_, i) => min + i);
 }
