@@ -1,0 +1,23 @@
+{
+  "name": "one-minute-utilities",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basarat/one-minute-utilities.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/basarat/one-minute-utilities/issues"
+  },
+  "homepage": "https://github.com/basarat/one-minute-utilities#readme",
+  "dependencies": {
+    "typescript": "3.9.5"
+  }
+}
