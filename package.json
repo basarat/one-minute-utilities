@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/basarat/one-minute-utilities#readme",
   "dependencies": {
+    "jest": "26.0.1",
+    "ts-jest": "26.1.0",
     "typescript": "3.9.5"
   }
 }
