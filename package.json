@@ -4,6 +4,8 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
+    "preversion": "npm run build",
+    "postversion": "npm publish && git push",
     "build": "tsc -p .",
     "test": "jest",
     "start": "jest --watch"

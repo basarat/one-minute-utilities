@@ -1,0 +1,4 @@
+# Release 
+```
+npm version patch
+```
