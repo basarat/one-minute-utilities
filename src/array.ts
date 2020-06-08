@@ -30,6 +30,10 @@ export function unique<T>(array: T[]): T[] {
   return Array.from(new Set(array));
 }
 
-export function range(min: number, max: number) { 
+export function range(min: number, max: number) {
   return Array(max - min + 1).fill(0).map((_, i) => min + i);
+}
+
+export function flat<T>(array: T[][]): T[] {
+  return array.flat();
 }

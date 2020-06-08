@@ -7,7 +7,8 @@ import {
   average,
   concat,
   unique,
-  range
+  range,
+  flat
 } from '../array';
 
 test('isArray', () => {
@@ -48,4 +49,8 @@ test('unique', () => {
 
 test('range', () => {
   expect(range(3, 7)).toStrictEqual([3, 4, 5, 6, 7]);
+});
+
+test('flat', () => {
+  expect(flat([[1, 2], [3, 4]])).toStrictEqual([1, 2, 3, 4]);
 });
