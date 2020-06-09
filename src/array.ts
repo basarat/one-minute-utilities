@@ -3,7 +3,7 @@ export function isArray(array: unknown): array is unknown[] {
 }
 
 export function isEqual<T>(a: T[], b: T[]): boolean {
-  return a.length == b.length && a.every((v, i) => v === b[i]);
+  return a.length === b.length && a.every((v, i) => v === b[i]);
 }
 
 export function max(array: number[]): number {
