@@ -2,7 +2,7 @@ export function isArray(array: unknown): array is unknown[] {
   return Array.isArray(array);
 }
 
-export function isEqual<T>(a: T[], b: T[]) {
+export function isEqual<T>(a: T[], b: T[]): boolean {
   return a.length == b.length && a.every((v, i) => v === b[i]);
 }
 
@@ -30,7 +30,7 @@ export function unique<T>(array: T[]): T[] {
   return Array.from(new Set(array));
 }
 
-export function range(min: number, max: number) {
+export function range(min: number, max: number): number[] {
   return Array(max - min + 1).fill(0).map((_, i) => min + i);
 }
 
