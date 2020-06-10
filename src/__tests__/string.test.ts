@@ -3,7 +3,8 @@ import {
   isPalindrome,
   areAnagrams,
   upperCaseFirst,
-  lowerCaseFirst
+  lowerCaseFirst,
+  upperCaseWords
 } from "../string";
 
 test('reverse', () => {
@@ -28,4 +29,9 @@ test('upperCaseFirst', () => {
 test('lowerCaseFirst', () => {
   expect(lowerCaseFirst('Hello World')).toStrictEqual('hello World');
   expect(lowerCaseFirst('')).toStrictEqual('');
+});
+
+test('upperCaseWords', () => {
+  expect(upperCaseWords('hello  world')).toStrictEqual('Hello  World');
+  expect(upperCaseWords('')).toStrictEqual('');
 });
