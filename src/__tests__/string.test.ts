@@ -1,7 +1,8 @@
 import {
   reverse,
   isPalindrome,
-  areAnagrams
+  areAnagrams,
+  upperCaseFirst
 } from "../string";
 
 test('reverse', () => {
@@ -14,6 +15,11 @@ test('isPalindrome', () => {
 });
 
 test('areAnagrams', () => {
-  expect(areAnagrams('node','denode')).toStrictEqual(false);
-  expect(areAnagrams('node','deno')).toStrictEqual(true);
+  expect(areAnagrams('node', 'denode')).toStrictEqual(false);
+  expect(areAnagrams('node', 'deno')).toStrictEqual(true);
+});
+
+test('upperCaseFirst', () => {
+  expect(upperCaseFirst('hello world')).toStrictEqual('Hello world');
+  expect(upperCaseFirst('')).toStrictEqual('');
 });
