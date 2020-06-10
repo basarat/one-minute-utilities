@@ -1,4 +1,8 @@
-import { reverse, isPalindrome } from "../string";
+import {
+  reverse,
+  isPalindrome,
+  areAnagrams
+} from "../string";
 
 test('reverse', () => {
   expect(reverse('hello world')).toStrictEqual('dlrow olleh');
@@ -7,4 +11,9 @@ test('reverse', () => {
 test('isPalindrome', () => {
   expect(isPalindrome('abc')).toStrictEqual(false);
   expect(isPalindrome('abcba')).toStrictEqual(true);
+});
+
+test('areAnagrams', () => {
+  expect(areAnagrams('node','denode')).toStrictEqual(false);
+  expect(areAnagrams('node','deno')).toStrictEqual(true);
 });
