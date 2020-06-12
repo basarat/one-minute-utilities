@@ -29,6 +29,10 @@ export function splitLines(str: string): string[] {
   return str.split(/\r?\n/);
 }
 
+export function newLineToBreak(str: string): string {
+  return str.replace(/\r?\n/g, '<br>');
+}
+
 export function escapeHTML(str: string): string {
   return str
     .replace(/&/g, '&amp;')

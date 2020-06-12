@@ -7,7 +7,8 @@ import {
   upperCaseWords,
   splitLines,
   escapeHTML,
-  unescapeHTML
+  unescapeHTML,
+  newLineToBreak
 } from "../string";
 
 test('reverse', () => {
@@ -42,6 +43,11 @@ test('upperCaseWords', () => {
 test('splitLines', () => {
   expect(splitLines('hello\nworld')).toStrictEqual(['hello', 'world']);
   expect(splitLines('hello\r\nworld')).toStrictEqual(['hello', 'world']);
+  expect(splitLines('hello\r\nworld\r\nagain')).toStrictEqual(['hello', 'world', 'again']);
+});
+
+test('newLineToBreak', () => {
+  expect(newLineToBreak('hello\nworld\r\nagain')).toStrictEqual('hello<br>world<br>again');
 });
 
 test('escapeHTML', () => {
