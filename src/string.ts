@@ -33,6 +33,10 @@ export function newLineToBreak(str: string): string {
   return str.replace(/\r?\n/g, '<br>');
 }
 
+export function removeWhitespace(str: string): string {
+  return str.replace(/\s/g, '');
+}
+
 export function escapeHTML(str: string): string {
   return str
     .replace(/&/g, '&amp;')
@@ -49,4 +53,8 @@ export function unescapeHTML(str: string): string {
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
     .replace(/&#0*39;/g, "'");
+}
+
+export function repeat(str: string, n: number): string {
+  return str.repeat(n);
 }

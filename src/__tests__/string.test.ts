@@ -8,7 +8,9 @@ import {
   splitLines,
   escapeHTML,
   unescapeHTML,
-  newLineToBreak
+  newLineToBreak,
+  removeWhitespace,
+  repeat,
 } from "../string";
 
 test('reverse', () => {
@@ -50,6 +52,10 @@ test('newLineToBreak', () => {
   expect(newLineToBreak('hello\nworld\r\nagain')).toStrictEqual('hello<br>world<br>again');
 });
 
+test('removeWhitespace', () => {
+  expect(removeWhitespace('hello\nworld\r\n  again')).toStrictEqual('helloworldagain');
+});
+
 test('escapeHTML', () => {
   expect(escapeHTML(`<div>Hello"World'&`)).toStrictEqual('&lt;div&gt;Hello&quot;World&#39;&amp;');
 });
@@ -57,4 +63,9 @@ test('escapeHTML', () => {
 test('unescapeHTML', () => {
   const str = `<div>Hello"World'&`;
   expect(unescapeHTML(escapeHTML(str))).toStrictEqual(str);
+});
+
+test('repeat', () => {
+  expect(repeat('Hello', 5)).toStrictEqual('HelloHelloHelloHelloHello');
+  expect(repeat('', 5)).toStrictEqual('');
 });
