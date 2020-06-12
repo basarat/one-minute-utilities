@@ -28,3 +28,13 @@ export function upperCaseWords(str: string): string {
 export function splitLines(str: string): string[] {
   return str.split(/\r?\n/);
 }
+
+export function escapeHTML(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
