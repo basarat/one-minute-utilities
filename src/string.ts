@@ -38,3 +38,11 @@ export function escapeHTML(str: string): string {
     .replace(/'/g, '&#39;');
 }
 
+export function unescapeHTML(str: string): string {
+  return str
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#0*39;/g, "'");
+}

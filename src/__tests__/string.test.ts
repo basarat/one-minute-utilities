@@ -6,7 +6,8 @@ import {
   lowerCaseFirst,
   upperCaseWords,
   splitLines,
-  escapeHTML
+  escapeHTML,
+  unescapeHTML
 } from "../string";
 
 test('reverse', () => {
@@ -45,4 +46,9 @@ test('splitLines', () => {
 
 test('escapeHTML', () => {
   expect(escapeHTML(`<div>Hello"World'&`)).toStrictEqual('&lt;div&gt;Hello&quot;World&#39;&amp;');
+});
+
+test('unescapeHTML', () => {
+  const str = `<div>Hello"World'&`;
+  expect(unescapeHTML(escapeHTML(str))).toStrictEqual(str);
 });
