@@ -2,9 +2,8 @@ import {
   reverse,
   isPalindrome,
   areAnagrams,
-  upperCaseFirst,
   lowerCaseFirst,
-  upperCaseWords,
+  upperCaseFirst,
   splitLines,
   escapeHTML,
   unescapeHTML,
@@ -27,19 +26,14 @@ test('areAnagrams', () => {
   expect(areAnagrams('node', 'deno')).toStrictEqual(true);
 });
 
-test('upperCaseFirst', () => {
-  expect(upperCaseFirst('hello world')).toStrictEqual('Hello world');
-  expect(upperCaseFirst('')).toStrictEqual('');
-});
-
 test('lowerCaseFirst', () => {
   expect(lowerCaseFirst('Hello World')).toStrictEqual('hello World');
   expect(lowerCaseFirst('')).toStrictEqual('');
 });
 
-test('upperCaseWords', () => {
-  expect(upperCaseWords('hello  world')).toStrictEqual('Hello  World');
-  expect(upperCaseWords('')).toStrictEqual('');
+test('upperCaseFirst', () => {
+  expect(upperCaseFirst('hello world')).toStrictEqual('Hello world');
+  expect(upperCaseFirst('')).toStrictEqual('');
 });
 
 test('splitLines', () => {
