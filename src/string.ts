@@ -24,3 +24,7 @@ export function upperCaseWords(str: string): string {
     .map(w => `${w.charAt(0).toUpperCase()}${w.slice(1)}`)
     .join(' ');
 }
+
+export function splitLines(str: string): string[] {
+  return str.split(/\r?\n/);
+}

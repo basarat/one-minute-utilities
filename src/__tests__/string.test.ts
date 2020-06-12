@@ -4,7 +4,8 @@ import {
   areAnagrams,
   upperCaseFirst,
   lowerCaseFirst,
-  upperCaseWords
+  upperCaseWords,
+  splitLines
 } from "../string";
 
 test('reverse', () => {
@@ -35,3 +36,9 @@ test('upperCaseWords', () => {
   expect(upperCaseWords('hello  world')).toStrictEqual('Hello  World');
   expect(upperCaseWords('')).toStrictEqual('');
 });
+
+test('splitLines', () => {
+  expect(splitLines('hello\nworld')).toStrictEqual(['hello', 'world']);
+  expect(splitLines('hello\r\nworld')).toStrictEqual(['hello', 'world']);
+});
+
